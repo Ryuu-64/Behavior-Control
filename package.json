@@ -1,0 +1,16 @@
+{
+  "name": "com.ryuu.behavior-control",
+  "license": "MIT",
+  "version": "0.1.0",
+  "displayName": "Behavior Control",
+  "unity": "2021.2",
+  "documentationUrl": "https://github.com/Ryuu-64/Behavior-Control",
+  "changelogUrl": "https://github.com/Ryuu-64/Behavior-Control",
+  "licensesUrl": "https://github.com/Ryuu-64/Behavior-Control",
+  "keywords": [],
+  "author": {
+    "name": "ryuu",
+    "email": "2357622935@qq.com",
+    "url": "https://blog.ryuu64.top/"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "BehaviorControlAssembly",
+    "rootNamespace": "Ryuu.BehaviorControl",
+    "references": [
+        "GUID:f01b9d52a304b774b89b33eb79f70c89"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
