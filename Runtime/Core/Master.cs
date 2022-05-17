@@ -20,7 +20,6 @@ namespace Ryuu.BehaviorControl.Core
             set
             {
                 updateMode = value;
-                MonoUpdater.Unsubscribe(OnUpdate);
                 MonoUpdater.Subscribe(OnUpdate, updateMode);
             }
         }
