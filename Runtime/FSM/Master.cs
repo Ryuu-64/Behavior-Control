@@ -22,7 +22,7 @@ namespace Ryuu.BehaviorControl.FSM
             monoUpdater.Subscribe(OnUpdate, updateMode);
         }
 
-        public void OnUpdate()
+        public override void OnUpdate()
         {
             if (anyState is {Connections: { }})
             {
@@ -71,6 +71,5 @@ namespace Ryuu.BehaviorControl.FSM
 
         public FSMNode GetStateWithName(string name) => AllNodes.Find(node => node.Name == name);
 
-        public override void Dispose() => MonoUpdater.Unsubscribe(OnUpdate);
     }
 }

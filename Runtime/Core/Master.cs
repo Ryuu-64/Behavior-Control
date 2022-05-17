@@ -12,7 +12,18 @@ namespace Ryuu.BehaviorControl.Core
         [SerializeField] protected readonly List<TNode> AllNodes;
         [SerializeField] protected readonly TNode PrimeNode;
         [SerializeField] protected readonly MonoUpdater MonoUpdater;
-        [SerializeField] protected readonly UpdateMode UpdateMode;
+        [SerializeField] private UpdateMode updateMode;
+
+        public UpdateMode UpdateMode
+        {
+            get => updateMode;
+            set
+            {
+                updateMode = value;
+                MonoUpdater.Unsubscribe(OnUpdate);
+                MonoUpdater.Subscribe(OnUpdate, updateMode);
+            }
+        }
 
         protected Master(List<TNode> allNodes, TNode primeNode, MonoUpdater monoUpdater, UpdateMode updateMode)
         {
@@ -37,8 +48,8 @@ namespace Ryuu.BehaviorControl.Core
             return AllNodes.OfType<T>();
         }
 
-        public virtual void Dispose()
-        {
-        }
+        public abstract void OnUpdate();
+
+        public void Dispose() => MonoUpdater.Unsubscribe(OnUpdate);
     }
 }
